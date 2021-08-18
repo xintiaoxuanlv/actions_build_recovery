@@ -72,11 +72,11 @@ jobs:
       
     - name: Fix the bug of missing common
       if: steps.var.outputs.fix_misscom == 'true'
-      run: cp repair/omni-9.0/qcom.xml workspace/.repo/local_manifests/
+      run: cp repair/omni-10.0/qcom.xml workspace/.repo/local_manifests/
       
     - name: Fix busybox bug
       if: steps.var.outputs.fix_busybox == 'true'
-      run: cp repair/omni-9.0/busybox.xml workspace/.repo/local_manifests/
+      run: cp repair/omni-10.0/busybox.xml workspace/.repo/local_manifests/
       
     - name: Clone your own device tree
       if: steps.var.outputs.use_own_dt == 'true'
